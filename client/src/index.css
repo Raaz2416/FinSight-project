@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(248, 100%, 99%);
+  --foreground: hsl(210, 25%, 7.8431%);
+  --card: hsl(210, 40%, 98%);
+  --card-foreground: hsl(210, 25%, 7.8431%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(210, 25%, 7.8431%);
+  --primary: hsl(221.2, 83.2%, 53.3%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(160.1, 84.1%, 39.4%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(240, 1.9608%, 90%);
+  --muted-foreground: hsl(210, 25%, 7.8431%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(221.2, 83.2%, 53.3%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(214.3, 31.8%, 91.4%);
+  --input: hsl(214.3, 31.8%, 91.4%);
+  --ring: hsl(221.2, 83.2%, 53.3%);
+  --chart-1: hsl(221.2, 83.2%, 53.3%);
+  --chart-2: hsl(160.1, 84.1%, 39.4%);
+  --chart-3: hsl(45, 93%, 47%);
+  --chart-4: hsl(147.1429, 78.5047%, 41.9608%);
+  --chart-5: hsl(340, 82%, 52%);
+  --sidebar: hsl(210, 40%, 98%);
+  --sidebar-foreground: hsl(210, 25%, 7.8431%);
+  --sidebar-primary: hsl(221.2, 83.2%, 53.3%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent: hsl(210, 40%, 96%);
+  --sidebar-accent-foreground: hsl(221.2, 83.2%, 53.3%);
+  --sidebar-border: hsl(214.3, 31.8%, 91.4%);
+  --sidebar-ring: hsl(221.2, 83.2%, 53.3%);
+  --success: hsl(160.1, 84.1%, 39.4%);
+  --success-foreground: hsl(0, 0%, 100%);
+  --warning: hsl(45, 93%, 47%);
+  --warning-foreground: hsl(0, 0%, 0%);
+  --error: hsl(0, 84.2%, 60.2%);
+  --error-foreground: hsl(0, 0%, 100%);
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: 'SF Mono', Consolas, monospace;
+  --radius: 0.5rem;
+  --shadow-sm: 0 1px 2px 0 hsl(0, 0%, 0%, 0.05);
+  --shadow: 0 1px 3px 0 hsl(0, 0%, 0%, 0.1), 0 1px 2px -1px hsl(0, 0%, 0%, 0.1);
+  --shadow-md: 0 4px 6px -1px hsl(0, 0%, 0%, 0.1), 0 2px 4px -2px hsl(0, 0%, 0%, 0.1);
+  --shadow-lg: 0 10px 15px -3px hsl(0, 0%, 0%, 0.1), 0 4px 6px -4px hsl(0, 0%, 0%, 0.1);
+  --shadow-xl: 0 20px 25px -5px hsl(0, 0%, 0%, 0.1), 0 8px 10px -6px hsl(0, 0%, 0%, 0.1);
+  --shadow-2xl: 0 25px 50px -12px hsl(0, 0%, 0%, 0.25);
+}
+
+.dark {
+  --background: hsl(222.2, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --card: hsl(222.2, 84%, 4.9%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --popover: hsl(222.2, 84%, 4.9%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --primary: hsl(217.2, 91.2%, 59.8%);
+  --primary-foreground: hsl(222.2, 84%, 4.9%);
+  --secondary: hsl(160.1, 84.1%, 39.4%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(217.2, 32.6%, 17.5%);
+  --muted-foreground: hsl(215, 20.2%, 65.1%);
+  --accent: hsl(217.2, 32.6%, 17.5%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217.2, 32.6%, 17.5%);
+  --input: hsl(217.2, 32.6%, 17.5%);
+  --ring: hsl(224.3, 76.3%, 48%);
+  --chart-1: hsl(220, 70%, 50%);
+  --chart-2: hsl(160, 60%, 45%);
+  --chart-3: hsl(30, 80%, 55%);
+  --chart-4: hsl(280, 65%, 60%);
+  --chart-5: hsl(340, 75%, 55%);
+  --sidebar: hsl(222.2, 84%, 4.9%);
+  --sidebar-foreground: hsl(210, 40%, 98%);
+  --sidebar-primary: hsl(217.2, 91.2%, 59.8%);
+  --sidebar-primary-foreground: hsl(222.2, 84%, 4.9%);
+  --sidebar-accent: hsl(217.2, 32.6%, 17.5%);
+  --sidebar-accent-foreground: hsl(210, 40%, 98%);
+  --sidebar-border: hsl(217.2, 32.6%, 17.5%);
+  --sidebar-ring: hsl(224.3, 76.3%, 48%);
+  --success: hsl(160.1, 84.1%, 39.4%);
+  --success-foreground: hsl(0, 0%, 100%);
+  --warning: hsl(45, 93%, 47%);
+  --warning-foreground: hsl(0, 0%, 0%);
+  --error: hsl(0, 84.2%, 60.2%);
+  --error-foreground: hsl(0, 0%, 100%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+
+  /* Focus styles */
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+
+  /* Custom button animations */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 active:bg-primary/95 transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 active:bg-secondary/95 transition-colors duration-200;
+  }
+
+  /* Chart container styles */
+  .chart-container {
+    @apply relative w-full h-full;
+  }
+
+  .chart-container canvas {
+    @apply max-w-full max-h-full;
+  }
+
+  /* Card animations */
+  .card-hover {
+    @apply transition-all duration-200 hover:shadow-md hover:-translate-y-0.5;
+  }
+
+  /* Loading states */
+  .skeleton {
+    @apply animate-pulse bg-muted;
+  }
+
+  /* Custom grid utilities */
+  .grid-fill {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  .grid-fit {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  /* Text utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Finance-specific utilities */
+  .amount-positive {
+    @apply text-success font-semibold;
+  }
+
+  .amount-negative {
+    @apply text-error font-semibold;
+  }
+
+  .progress-bar {
+    @apply w-full bg-muted rounded-full overflow-hidden;
+  }
+
+  .progress-fill {
+    @apply h-full bg-primary transition-all duration-500 ease-out;
+  }
+
+  /* Investment status colors */
+  .investment-gain {
+    @apply text-success bg-success/10 border-success/20;
+  }
+
+  .investment-loss {
+    @apply text-error bg-error/10 border-error/20;
+  }
+
+  /* Category colors for transactions */
+  .category-food { @apply bg-orange-100 text-orange-800; }
+  .category-transport { @apply bg-blue-100 text-blue-800; }
+  .category-shopping { @apply bg-purple-100 text-purple-800; }
+  .category-bills { @apply bg-yellow-100 text-yellow-800; }
+  .category-entertainment { @apply bg-pink-100 text-pink-800; }
+  .category-healthcare { @apply bg-red-100 text-red-800; }
+  .category-education { @apply bg-indigo-100 text-indigo-800; }
+  .category-income { @apply bg-green-100 text-green-800; }
+  .category-other { @apply bg-slate-100 text-slate-800; }
+
+  /* Goal category colors */
+  .goal-emergency { @apply bg-blue-600; }
+  .goal-vacation { @apply bg-purple-600; }
+  .goal-car { @apply bg-green-600; }
+  .goal-home { @apply bg-orange-600; }
+  .goal-education { @apply bg-indigo-600; }
+  .goal-retirement { @apply bg-emerald-600; }
+  .goal-investment { @apply bg-red-600; }
+  .goal-debt { @apply bg-yellow-600; }
+  .goal-other { @apply bg-slate-600; }
+
+  /* Responsive typography */
+  .heading-responsive {
+    @apply text-xl sm:text-2xl lg:text-3xl font-bold;
+  }
+
+  .subheading-responsive {
+    @apply text-lg sm:text-xl lg:text-2xl font-semibold;
+  }
+
+  /* Glassmorphism effects */
+  .glass {
+    @apply backdrop-blur-sm bg-white/80 border border-white/20;
+  }
+
+  .glass-dark {
+    @apply backdrop-blur-sm bg-slate-900/80 border border-slate-700/20;
+  }
+}
+
+@layer components {
+  /* Dashboard card component */
+  .dashboard-card {
+    @apply bg-card text-card-foreground rounded-lg border shadow-sm p-6 transition-all duration-200;
+  }
+
+  .dashboard-card:hover {
+    @apply shadow-md border-primary/20;
+  }
+
+  /* Metric display component */
+  .metric-display {
+    @apply flex items-center justify-between;
+  }
+
+  .metric-value {
+    @apply text-2xl font-bold text-foreground;
+  }
+
+  .metric-change {
+    @apply text-sm font-medium flex items-center gap-1;
+  }
+
+  .metric-icon {
+    @apply w-12 h-12 rounded-lg flex items-center justify-center;
+  }
+
+  /* Transaction row component */
+  .transaction-row {
+    @apply border-b border-border hover:bg-accent/50 transition-colors;
+  }
+
+  .transaction-icon {
+    @apply w-8 h-8 rounded-lg flex items-center justify-center;
+  }
+
+  /* Goal progress component */
+  .goal-progress {
+    @apply w-full bg-muted rounded-full h-3 overflow-hidden;
+  }
+
+  .goal-progress-fill {
+    @apply h-full transition-all duration-700 ease-out;
+  }
+
+  /* Investment card component */
+  .investment-card {
+    @apply bg-card border rounded-lg p-4 hover:shadow-md transition-all duration-200;
+  }
+
+  /* Form components */
+  .form-group {
+    @apply space-y-2;
+  }
+
+  .form-row {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-4;
+  }
+
+  /* Modal components */
+  .modal-overlay {
+    @apply fixed inset-0 bg-black/50 flex items-center justify-center z-50;
+  }
+
+  .modal-content {
+    @apply bg-card rounded-lg shadow-xl max-w-md w-full mx-4 max-h-[90vh] overflow-y-auto;
+  }
+
+  /* Navigation components */
+  .nav-link {
+    @apply font-medium transition-colors hover:text-primary;
+  }
+
+  .nav-link.active {
+    @apply text-primary border-b-2 border-primary pb-1;
+  }
+
+  /* Button variants */
+  .btn-icon {
+    @apply w-10 h-10 rounded-lg flex items-center justify-center transition-colors;
+  }
+
+  .btn-icon:hover {
+    @apply bg-accent text-accent-foreground;
+  }
+
+  /* Status indicators */
+  .status-positive {
+    @apply text-success bg-success/10 border border-success/20 px-2 py-1 rounded-full text-xs font-medium;
+  }
+
+  .status-negative {
+    @apply text-error bg-error/10 border border-error/20 px-2 py-1 rounded-full text-xs font-medium;
+  }
+
+  .status-neutral {
+    @apply text-muted-foreground bg-muted border border-border px-2 py-1 rounded-full text-xs font-medium;
+  }
+
+  /* Loading components */
+  .loading-spinner {
+    @apply animate-spin rounded-full border-2 border-primary border-t-transparent;
+  }
+
+  .loading-pulse {
+    @apply animate-pulse bg-muted rounded;
+  }
+
+  /* Tooltip styles */
+  .tooltip {
+    @apply bg-slate-900 text-white px-2 py-1 rounded text-xs;
+  }
+
+  /* Focus management */
+  .focus-management {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+  }
+}
+
+@layer utilities {
+  /* Custom spacing utilities */
+  .space-y-0\.5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0.125rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0.125rem * var(--tw-space-y-reverse));
+  }
+
+  /* Custom border utilities */
+  .border-dashed-primary {
+    border-style: dashed;
+    border-color: hsl(var(--primary));
+  }
+
+  /* Custom text utilities */
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Custom layout utilities */
+  .container-dashboard {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-8 sm:py-12 lg:py-16;
+  }
+
+  /* Accessibility utilities */
+  .sr-only-focusable:focus {
+    @apply not-sr-only;
+  }
+
+  /* Print utilities */
+  @media print {
+    .print-hidden {
+      display: none !important;
+    }
+
+    .print-visible {
+      display: block !important;
+    }
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .contrast-border {
+      border-width: 2px;
+    }
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    .motion-safe-animate {
+      animation: none;
+    }
+
+    .motion-safe-transition {
+      transition: none;
+    }
+  }
+}
