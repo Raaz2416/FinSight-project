@@ -19,9 +19,8 @@
 ### Frontend
 - **React 18 + TypeScript** – Modern, type-safe UI development  
 - **Tailwind CSS + shadcn/ui** – Responsive, accessible styling  
-- **TanStack Query** – Server state management & caching  
 - **Wouter** – Lightweight routing  
-- **React Hook Form + Zod** – Type-safe form handling  
+- **React Hook Form** – Type-safe form handling  
 - **Chart.js** – Interactive financial visualizations  
 
 ### Backend
@@ -50,10 +49,9 @@
 ## 📦 External Dependencies
 - **Neon Database** – Serverless PostgreSQL hosting  
 - **Radix UI** – Accessible headless UI components  
-- **Embla Carousel** – Touch-friendly carousel  
 - **Lucide React / Font Awesome** – Icon libraries  
-- **Class Variance Authority / Tailwind Merge** – Type-safe class composition  
-- **Date-fns** – Date utilities  
+- **Class Variance Authority / Tailwind Merge** – Type-safe class composition
+- 
 - **CSV Parser** – Bank statement & transaction import  
 
 ---
